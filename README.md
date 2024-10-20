@@ -10,7 +10,7 @@ Tool to convert a string from one case to another.
 - [x] User can choose the case of their input string from a dropdown menu
 - [x] User can choose the case of the output string from a dropdown menu
 - [x] User can click a submit button
-- [ ] When the user has:
+- [x] When the user has:
   - entered an input string,
   - chosen the correct case of the input string,
   - chosen a desired output case,
@@ -33,7 +33,7 @@ Tool to convert a string from one case to another.
 ### Core non-functional requirements
 
 - [x] Project contains a README with functional & non-functional requirements
-- [ ] Components have >80% unit test coverage
+- [ ] ~~Components have >80% unit test coverage~~
 - [ ] Project includes CI pipeline
 
 ### Extra functional requirements
