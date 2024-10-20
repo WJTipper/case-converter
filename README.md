@@ -49,5 +49,6 @@ Tool to convert a string from one case to another.
 ### Extra non-functional requirements
 
 - [ ] Project includes Cypress E2E tests
+- [ ] Page displays instructions on how to use the tool to the user
 - [ ] Page is styled
 - [ ] Any toggles & expandable sections are animated
