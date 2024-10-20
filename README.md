@@ -33,7 +33,7 @@ Tool to convert a string from one case to another.
 ### Core non-functional requirements
 
 - [x] Project contains a README with functional & non-functional requirements
-- [ ] Functions have >80% unit test coverage
+- [x] Functions have >80% unit test coverage
 - [ ] Project includes CI pipeline
 
 ### Extra functional requirements
