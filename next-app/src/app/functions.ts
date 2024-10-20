@@ -80,7 +80,7 @@ export function validateInputs (inputStr: string, inputCase: string, outputCase:
     }
 
     if (inputCase == "camel" || inputCase == "pascal") {
-        if (inputStr.search(/-_/) != -1) {
+        if (inputStr.search(/_/) != -1 || inputStr.search(/-/) != -1) {
             return "Invalid input string: camel & pascal strings should not contain dashes or underscores"
         }
     } else if (inputCase == "kebab" || inputCase == "train") {
