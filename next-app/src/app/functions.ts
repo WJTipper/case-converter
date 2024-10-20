@@ -29,7 +29,7 @@ export function convertString (inputStr: string, inputCase: string, outputCase: 
     } else if (inputCase == "camel" || inputCase == "pascal") {
         deconstructedString = deconstructCamelAndPascal(inputStr)
     } else {
-        return "ERROR: invalid input case"
+        return "Please select an input case"
     }
 
     if (outputCase == "kebab" || outputCase == "snake" || outputCase == "mumble") {
@@ -50,6 +50,6 @@ export function convertString (inputStr: string, inputCase: string, outputCase: 
     } else if (outputCase == "snake" || outputCase == "scream") {
         return deconstructedString.join("_")
     } else {
-        return "ERROR: invalid output case"
+        return "Please select an output case"
     }
 }
