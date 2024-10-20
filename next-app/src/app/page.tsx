@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { convertString } from "./functions";
 
 export default function Home() {
@@ -13,13 +14,18 @@ export default function Home() {
 	const outputCaseList: string[] = [...inputCaseList];
 	outputCaseList.push("mumble");
 
+	const [outputString, setOutputString] = useState("");
+
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const data = new FormData(event.currentTarget);
-		const inputStr = data.get("input-str") as string;
-		const inputCase = data.get("input-case") as string;
-		const outputCase = data.get("output-case") as string;
-		convertString(inputStr, inputCase, outputCase);
+		setOutputString(
+			convertString(
+				data.get("input-str") as string,
+				data.get("input-case") as string,
+				data.get("output-case") as string
+			)
+		);
 	};
 
 	return (
@@ -59,6 +65,14 @@ export default function Home() {
 					Submit
 				</button>
 			</form>
+			{outputString != "" && (
+				<div>
+					<br />
+					Result:
+					<br />
+					{outputString}
+				</div>
+			)}
 		</div>
 	);
 }
