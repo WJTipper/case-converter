@@ -34,7 +34,7 @@ Tool to convert a string from one case to another.
 
 - [x] Project contains a README with functional & non-functional requirements
 - [x] Functions have >80% unit test coverage
-- [ ] Project includes CI pipeline
+- [x] Project includes CI pipeline
 
 ### Extra functional requirements
 
