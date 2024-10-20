@@ -2,7 +2,16 @@
 import { convertString } from "./functions";
 
 export default function Home() {
-	const caseList: string[] = ["mumble", "scream"];
+	const inputCaseList: string[] = [
+		"camel",
+		"kebab",
+		"pascal",
+		"snake",
+		"scream",
+		"train",
+	];
+	const outputCaseList: string[] = [...inputCaseList];
+	outputCaseList.push("mumble");
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -28,7 +37,7 @@ export default function Home() {
 					className="form-select"
 				>
 					<option selected>{}</option>
-					{caseList.map((item, index) => {
+					{inputCaseList.map((item, index) => {
 						return <option key={index}>{item}</option>;
 					})}
 				</select>
@@ -41,7 +50,7 @@ export default function Home() {
 					className="form-select"
 				>
 					<option selected>{}</option>
-					{caseList.map((item, index) => {
+					{outputCaseList.map((item, index) => {
 						return <option key={index}>{item}</option>;
 					})}
 				</select>
