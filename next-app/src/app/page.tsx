@@ -1,4 +1,5 @@
 "use client";
+import { convertString } from "./functions";
 
 export default function Home() {
 	const caseList: string[] = ["mumble", "scream"];
@@ -6,9 +7,10 @@ export default function Home() {
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const data = new FormData(event.currentTarget);
-		const inputStr = data.get("inputStr");
-		const inputCase = data.get("inputCase");
-		const outputCase = data.get("outputCase");
+		const inputStr = data.get("input-str") as string;
+		const inputCase = data.get("input-case") as string;
+		const outputCase = data.get("output-case") as string;
+		convertString(inputStr, inputCase, outputCase);
 	};
 
 	return (
@@ -16,13 +18,13 @@ export default function Home() {
 			<form onSubmit={handleSubmit}>
 				<label htmlFor="input-str">Input string</label>
 				<br />
-				<input id="input-str" name="inputStr" type="text" />
+				<input id="input-str" name="input-str" type="text" />
 				<br />
 				<label htmlFor="input-str">Input case</label>
 				<br />
 				<select
 					id="input-case"
-					name="inputCase"
+					name="input-case"
 					className="form-select"
 				>
 					<option selected>{}</option>
@@ -35,7 +37,7 @@ export default function Home() {
 				<br />
 				<select
 					id="output-case"
-					name="outputCase"
+					name="output-case"
 					className="form-select"
 				>
 					<option selected>{}</option>
