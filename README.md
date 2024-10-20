@@ -7,8 +7,8 @@ Tool to convert a string from one case to another.
 ### Core functional requirements
 
 - [x] User can enter an input string into a text field
-- [ ] User can choose the case of their input string from a dropdown menu
-- [ ] User can choose the case of the output string from a dropdown menu
+- [x] User can choose the case of their input string from a dropdown menu
+- [x] User can choose the case of the output string from a dropdown menu
 - [x] User can click a submit button
 - [ ] When the user has:
   - entered an input string,
