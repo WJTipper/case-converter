@@ -16,16 +16,16 @@ Tool to convert a string from one case to another.
   - chosen a desired output case,
   - and clicked the submit button,
   - then the user's string is displayed in the desired case
-- [ ] When the user has:
+- [x] When the user has:
   - entered an input string,
   - chosen an incorrect case for the input string,
   - and clicked the submit button,
   - then an error message is displayed
-- [ ] When the user has:
+- [x] When the user has:
   - entered an empty input string,
   - and clicked the submit button,
   - then an error message is displayed
-- [ ] When the user has:
+- [x] When the user has:
   - not chosen an input case or output case,
   - and clicked the submit button,
   - then an error message is displayed
@@ -33,7 +33,7 @@ Tool to convert a string from one case to another.
 ### Core non-functional requirements
 
 - [x] Project contains a README with functional & non-functional requirements
-- [ ] ~~Components have >80% unit test coverage~~
+- [ ] Functions have >80% unit test coverage
 - [ ] Project includes CI pipeline
 
 ### Extra functional requirements
