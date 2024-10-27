@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { convertString, validateInputs } from "./functions";
+import { convertString } from "@/functions/convert-string";
+import { validateInputs } from "@/functions/validate-inputs";
 
 export default function Home() {
 	const inputCaseList: string[] = [
