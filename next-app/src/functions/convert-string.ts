@@ -1,4 +1,9 @@
-import { separators } from "@/utils/utils"
+const separators = {
+    "kebab": "-",
+    "scream": "_",
+    "snake": "_",
+    "train": "-"
+}
 
 function deconstructCamelAndPascal (inputStr: string) {
     inputStr = [inputStr[0].toLowerCase(), inputStr.slice(1)].join("")
@@ -43,8 +48,8 @@ export function convertString (inputStr: string, inputCase: string, outputCase: 
 
     if (outputCase == "camel" || outputCase == "mumble" || outputCase == "pascal") {
         return deconstructedString.join("")
-    } else if (inputCase == "kebab" || inputCase == "scream" || inputCase == "snake" || inputCase == "train") {
-        return deconstructedString.join(separators[inputCase])
+    } else if (outputCase == "kebab" || outputCase == "scream" || outputCase == "snake" || outputCase == "train") {
+        return deconstructedString.join(separators[outputCase])
     }
 
     return ""
