@@ -1,3 +1,5 @@
+import { separators } from "@/utils/utils"
+
 function deconstructCamelAndPascal (inputStr: string) {
     inputStr = [inputStr[0].toLowerCase(), inputStr.slice(1)].join("")
     let stringContainsUppercase: boolean = true
@@ -22,12 +24,10 @@ function deconstructCamelAndPascal (inputStr: string) {
 export function convertString (inputStr: string, inputCase: string, outputCase: string) {
     let deconstructedString: string[] = []
 
-    if (inputCase == "kebab" || inputCase == "train") {
-        deconstructedString = inputStr.split("-")
-    } else if (inputCase == "snake" || inputCase == "scream") {
-        deconstructedString = inputStr.split("_")
-    } else if (inputCase == "camel" || inputCase == "pascal") {
+    if (inputCase == "camel" || inputCase == "pascal") {
         deconstructedString = deconstructCamelAndPascal(inputStr)
+    } else if (inputCase == "kebab" || inputCase == "scream" || inputCase == "snake" || inputCase == "train") {
+        deconstructedString = inputStr.split(separators[inputCase])
     }
 
     if (outputCase == "kebab" || outputCase == "snake" || outputCase == "mumble") {
@@ -43,10 +43,8 @@ export function convertString (inputStr: string, inputCase: string, outputCase: 
 
     if (outputCase == "camel" || outputCase == "mumble" || outputCase == "pascal") {
         return deconstructedString.join("")
-    } else if (outputCase == "kebab" || outputCase == "train") {
-        return deconstructedString.join("-")
-    } else if (outputCase == "snake" || outputCase == "scream") {
-        return deconstructedString.join("_")
+    } else if (inputCase == "kebab" || inputCase == "scream" || inputCase == "snake" || inputCase == "train") {
+        return deconstructedString.join(separators[inputCase])
     }
 
     return ""
