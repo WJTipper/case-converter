@@ -92,7 +92,7 @@ export default function Home() {
 				{errorMessage != "" && (
 					<div className="col-6">
 						<div className="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">
-							<b>Error:</b>
+							<strong>Error:</strong>
 							<br />
 							{errorMessage}
 						</div>
@@ -110,7 +110,7 @@ export default function Home() {
 					<div>
 						{outputString != "" && (
 							<div className="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
-								<b>Success!</b>
+								<strong>Success!</strong>
 								<br />
 								Result:
 								<br />
