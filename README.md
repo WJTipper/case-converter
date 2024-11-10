@@ -50,5 +50,5 @@ Tool to convert a string from one case to another.
 
 - [ ] Project includes Cypress E2E tests
 - [ ] Page displays instructions on how to use the tool to the user
-- [ ] Page is styled
+- [x] Page is styled
 - [ ] Any toggles & expandable sections are animated
