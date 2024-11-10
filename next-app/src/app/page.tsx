@@ -89,28 +89,37 @@ export default function Home() {
 						})}
 					</select>
 				</div>
+				{errorMessage != "" && (
+					<div className="col-6">
+						<div className="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">
+							<b>Error:</b>
+							<br />
+							{errorMessage}
+						</div>
+					</div>
+				)}
 				<div className="col-12">
 					<button type="submit" className="btn btn-primary">
 						Submit
 					</button>
 				</div>
 			</form>
-			{errorMessage != "" && (
-				<div>
-					<br />
-					Error:
-					<br />
-					{errorMessage}
+			<br />
+			<div className="row g-3">
+				<div className="col-6">
+					<div>
+						{outputString != "" && (
+							<div className="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
+								<b>Success!</b>
+								<br />
+								Result:
+								<br />
+								{outputString}
+							</div>
+						)}
+					</div>
 				</div>
-			)}
-			{outputString != "" && (
-				<div>
-					<br />
-					Result:
-					<br />
-					{outputString}
-				</div>
-			)}
+			</div>
 		</div>
 	);
 }
