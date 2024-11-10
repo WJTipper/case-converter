@@ -43,41 +43,57 @@ export default function Home() {
 	};
 
 	return (
-		<div>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="input-str">Input string</label>
-				<br />
-				<input id="input-str" name="input-str" type="text" />
-				<br />
-				<label htmlFor="input-str">Input case</label>
-				<br />
-				<select
-					id="input-case"
-					name="input-case"
-					className="form-select"
-				>
-					<option selected>{}</option>
-					{inputCaseList.map((item, index) => {
-						return <option key={index}>{item}</option>;
-					})}
-				</select>
-				<br />
-				<label htmlFor="output-str">Output case</label>
-				<br />
-				<select
-					id="output-case"
-					name="output-case"
-					className="form-select"
-				>
-					<option selected>{}</option>
-					{outputCaseList.map((item, index) => {
-						return <option key={index}>{item}</option>;
-					})}
-				</select>
-				<br />
-				<button type="submit" className="btn btn-primary">
-					Submit
-				</button>
+		<div className="container">
+			<form onSubmit={handleSubmit} className="row g-3">
+				<div className="row g-3">
+					<div className="col-md-6">
+						<label htmlFor="input-str" className="form-label">
+							Input string
+						</label>
+						<input
+							id="input-str"
+							name="input-str"
+							type="text"
+							className="form-control"
+						/>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<label htmlFor="input-str" className="form-label">
+						Input case
+					</label>
+					<select
+						id="input-case"
+						name="input-case"
+						className="form-select"
+					>
+						<option selected>{}</option>
+						{inputCaseList.map((item, index) => {
+							return <option key={index}>{item}</option>;
+						})}
+					</select>
+				</div>
+				<div className="col-md-6">
+					<label htmlFor="output-str" className="form-label">
+						Output case
+					</label>
+					<br />
+					<select
+						id="output-case"
+						name="output-case"
+						className="form-select"
+					>
+						<option selected>{}</option>
+						{outputCaseList.map((item, index) => {
+							return <option key={index}>{item}</option>;
+						})}
+					</select>
+				</div>
+				<div className="col-12">
+					<button type="submit" className="btn btn-primary">
+						Submit
+					</button>
+				</div>
 			</form>
 			{errorMessage != "" && (
 				<div>
