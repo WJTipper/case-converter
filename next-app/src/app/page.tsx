@@ -21,15 +21,13 @@ export default function Home() {
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const data = new FormData(event.currentTarget);
-		setErrorMessage(
-			validateInputs(
-				data.get("input-str") as string,
-				data.get("input-case") as string,
-				data.get("output-case") as string
-			)
+		const inputHasError = validateInputs(
+			data.get("input-str") as string,
+			data.get("input-case") as string,
+			data.get("output-case") as string
 		);
-		console.log(errorMessage);
-		if (errorMessage == "") {
+
+		if (inputHasError == "") {
 			setOutputString(
 				convertString(
 					data.get("input-str") as string,
@@ -37,8 +35,10 @@ export default function Home() {
 					data.get("output-case") as string
 				)
 			);
+			setErrorMessage("");
 		} else {
 			setOutputString("");
+			setErrorMessage(inputHasError);
 		}
 	};
 
